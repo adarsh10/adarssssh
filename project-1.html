@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copilot Onboarding FRE — Adarsh Raj Shah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="project-page">
+
+  <!-- PASSWORD GATE -->
+  <div id="passwordGate" style="position:fixed;inset:0;z-index:99999;background:#0a0a0a;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;">
+    <div style="text-align:center;max-width:360px;padding:2rem;">
+      <div style="font-size:.85rem;color:#888;margin-bottom:.75rem;letter-spacing:.06em;text-transform:uppercase;">Protected Work</div>
+      <h2 style="color:#fff;font-size:1.5rem;margin:0 0 .5rem;">Enter Password</h2>
+      <p style="color:#777;font-size:.9rem;margin:0 0 1.5rem;">This case study is password-protected.</p>
+      <input id="pwInput" type="password" placeholder="Password" autocomplete="off" style="width:100%;padding:.75rem 1rem;border:1px solid #333;border-radius:10px;background:#161616;color:#fff;font-size:1rem;outline:none;box-sizing:border-box;font-family:inherit;" />
+      <div id="pwError" style="color:#f87171;font-size:.8rem;margin-top:.5rem;display:none;">Incorrect password. Try again.</div>
+      <button id="pwSubmit" style="margin-top:1rem;padding:.75rem 2rem;background:#fff;color:#000;border:none;border-radius:10px;font-size:.95rem;cursor:pointer;font-family:inherit;font-weight:500;width:100%;">Unlock</button>
+    </div>
+  </div>
+  <script>
+  (function(){
+    var KEY='pf_unlocked';
+    if(sessionStorage.getItem(KEY)==='true'){document.getElementById('passwordGate').style.display='none';return;}
+    var inp=document.getElementById('pwInput'),btn=document.getElementById('pwSubmit'),err=document.getElementById('pwError');
+    function tryUnlock(){if(inp.value==='project123'){sessionStorage.setItem(KEY,'true');document.getElementById('passwordGate').style.display='none';}else{err.style.display='block';inp.value='';}}
+    btn.addEventListener('click',tryUnlock);
+    inp.addEventListener('keydown',function(e){if(e.key==='Enter')tryUnlock();});
+  })();
+  </script>
+
+  <!-- BACK NAV -->
+  <nav class="back-nav" id="backNav">
+    <a href="index.html" class="back-link">
+      <span class="back-link-arrow">←</span> Back to Work
+    </a>
+    <a href="index.html" class="back-nav-logo">Adarsh.</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="proj-hero">
+    <div class="proj-hero-content">
+      <div class="proj-hero-tags">
+        <span class="proj-tag proj-tag--accent">AI Design</span>
+        <span class="proj-tag">UX Design</span>
+        <span class="proj-tag">Mobile · iOS &amp; Android</span>
+        <span class="proj-tag">2024</span>
+      </div>
+      <h1 class="proj-hero-title">New User Onboarding for M365 Copilot Mobile</h1>
+      <p class="proj-hero-sub">Reframing the first-run experience from a feature tour into a guided first success — so new users feel Copilot's value before they're asked to trust it.</p>
+      <div class="proj-hero-meta">
+        <div class="proj-meta-item">
+          <div class="proj-meta-label">Role</div>
+          <div class="proj-meta-value">Senior Product Designer</div>
+        </div>
+        <div class="proj-meta-item">
+          <div class="proj-meta-label">Product</div>
+          <div class="proj-meta-value">M365 Copilot Mobile</div>
+        </div>
+        <div class="proj-meta-item">
+          <div class="proj-meta-label">Scope</div>
+          <div class="proj-meta-value">Strategy · UX · Prompt Design · E2E Flows</div>
+        </div>
+        <div class="proj-meta-item">
+          <div class="proj-meta-label">Platform</div>
+          <div class="proj-meta-value">iOS · Android</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual banner -->
+    <div class="proj-banner proj-bg-1">
+      <div class="proj-banner-inner">
+        <div class="proj-banner-phone">
+          <div class="pbp-header">
+            <div class="pbp-dot"></div>
+            <div class="pbp-steps">
+              <div class="pbp-step pbp-step--active"></div>
+              <div class="pbp-step"></div>
+              <div class="pbp-step"></div>
+            </div>
+          </div>
+          <div class="pbp-icon"></div>
+          <div class="pbp-t1"></div>
+          <div class="pbp-t2"></div>
+          <div class="pbp-chip"></div>
+          <div class="pbp-chip pbp-chip--2"></div>
+          <div class="pbp-cta"></div>
+        </div>
+        <div class="proj-banner-phone proj-banner-phone--offset">
+          <div class="pbp-header">
+            <div class="pbp-dot"></div>
+            <div class="pbp-steps">
+              <div class="pbp-step"></div>
+              <div class="pbp-step pbp-step--active"></div>
+              <div class="pbp-step"></div>
+            </div>
+          </div>
+          <div class="pbp-icon"></div>
+          <div class="pbp-t1"></div>
+          <div class="pbp-t2"></div>
+          <div class="pbp-chip"></div>
+          <div class="pbp-chip pbp-chip--2"></div>
+          <div class="pbp-cta"></div>
+        </div>
+        <div class="proj-banner-phone proj-banner-phone--offset" style="opacity:0.3; transform: translateY(36px);">
+          <div class="pbp-header">
+            <div class="pbp-dot"></div>
+            <div class="pbp-steps">
+              <div class="pbp-step"></div>
+              <div class="pbp-step"></div>
+              <div class="pbp-step pbp-step--active"></div>
+            </div>
+          </div>
+          <div class="pbp-icon"></div>
+          <div class="pbp-t1"></div>
+          <div class="pbp-t2"></div>
+          <div class="pbp-cta"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <div class="proj-body">
+
+    <div class="proj-section reveal">
+      <span class="proj-section-label">The Problem</span>
+      <h2>First impressions were breaking confidence, not building it.</h2>
+      <p>New users were landing in Copilot with low expectations and leaving with even lower ones. Chat adoption and retention were both poor, especially on mobile — a surface where attention is short and trust is hard-earned.</p>
+      <p>Research and data surfaced a clear pattern: users didn't understand what Copilot could actually do for them. Suggested prompts were generic and often ignored. When the first prompt failed or felt irrelevant, trust dropped fast and users rarely returned. Starter SKU users were hit hardest — they had less context for why the AI would be useful.</p>
+      <div class="proj-callout">
+        <p>"If the first interaction feels useful, users will come back. If it doesn't, they probably won't."</p>
+      </div>
+    </div>
+
+    <div class="proj-img-box reveal">
+      <div class="proj-img-ph">
+        <div class="proj-img-ph-icon">⬚</div>
+        <span>Research insights — drop your image here</span>
+      </div>
+    </div>
+
+    <div class="proj-section reveal">
+      <span class="proj-section-label">The Goal</span>
+      <h2>Design a first-run experience built around a guided first success.</h2>
+      <p>Instead of a generic intro tour, the goal was to reframe onboarding as a moment that helps users actually accomplish something with Copilot on day one. Success looked like:</p>
+      <ul class="proj-list">
+        <li>Copilot's value communicated in real, relatable work contexts</li>
+        <li>Users succeeding with their very first prompt</li>
+        <li>A consistent experience that worked across different SKUs and eligibility states</li>
+        <li>Measurable improvement in Week-1 engagement and prompt submission rates</li>
+      </ul>
+    </div>
+
+    <div class="proj-img-box reveal">
+      <div class="proj-img-ph">
+        <div class="proj-img-ph-icon">⬚</div>
+        <span>Goal & success metrics — drop your image here</span>
+      </div>
+    </div>
+
+    <div class="proj-section reveal">
+      <span class="proj-section-label">My Approach</span>
+      <h2>Reframing onboarding as a guided first success.</h2>
+      <p>Instead of a generic intro tour, I reframed onboarding as a moment where users feel the value of Copilot before being asked to trust it.</p>
+      <div class="proj-callout">
+        <p>"If the first interaction feels useful, users will come back."</p>
+      </div>
+      <p>This core idea led to three key design moves: personalized first prompts, progressive setup that runs silently, and clear exits that respect user control at every step.</p>
+    </div>
+
+    <div class="proj-img-box reveal">
+      <div class="proj-img-ph">
+        <div class="proj-img-ph-icon">⬚</div>
+        <span>Approach overview — drop your image here</span>
+      </div>
+    </div>
+
+    <div class="proj-section reveal">
+      <span class="proj-section-label">Key Design Decisions</span>
+      <h2>Three moves that changed the onboarding equation.</h2>
+      <div class="proj-decisions">
+        <div class="proj-decision">
+          <div class="proj-decision-num">01</div>
+          <div>
+            <h3>Personalized first prompts, not generic suggestions</h3>
+            <p>For Premium users, prompts were graph-based — surfacing content connected to their actual work (emails, meetings, docs). For Starter users, lightweight non-graph prompts framed around "help me with my work" were used instead. The focus shifted from showcasing features to demonstrating immediate relevance.</p>
+          </div>
+        </div>
+        <div class="proj-decision">
+          <div class="proj-decision-num">02</div>
+          <div>
+            <h3>Progressive setup — no wall of steps</h3>
+            <p>Eligibility checks and background setup ran silently. Users were only moved to the chat experience when Copilot was actually ready to respond. The same mental model worked across AAD and MSA paid users, removing confusion during early app moments.</p>
+          </div>
+        </div>
+        <div class="proj-decision">
+          <div class="proj-decision-num">03</div>
+          <div>
+            <h3>Clear exits and user control as a design constraint</h3>
+            <p>Users could dismiss onboarding without penalty, at any time. No forced prompts, no dead-end flows. Trust was treated as something earned through design quality — not something extracted through dark patterns or forced engagement loops.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-img-box reveal">
+      <div class="proj-img-ph">
+        <div class="proj-img-ph-icon">⬚</div>
+        <span>Design explorations & screen flows — drop your image here</span>
+      </div>
+    </div>
+
+    <div class="proj-section reveal">
+      <span class="proj-section-label">What I Designed</span>
+      <h2>End-to-end flows, not just screens.</h2>
+      <ul class="proj-list">
+        <li>Complete first-run experience flows for new users across iOS and Android</li>
+        <li>Prompt templates engineered for first-time success — contextual, specific, achievable</li>
+        <li>SKU-aware onboarding logic differentiating the Starter and Premium experience</li>
+        <li>A repeatable onboarding system that other teams could plug into, not a one-off screen set</li>
+      </ul>
+    </div>
+
+    <div class="proj-img-box reveal">
+      <div class="proj-img-ph">
+        <div class="proj-img-ph-icon">⬚</div>
+        <span>SKU-aware onboarding logic — drop your image here</span>
+      </div>
+    </div>
+
+    <div class="proj-img-box reveal">
+      <div class="proj-img-ph">
+        <div class="proj-img-ph-icon">⬚</div>
+        <span>Final UI — drop your image here</span>
+      </div>
+    </div>
+
+    <div class="proj-section reveal">
+      <span class="proj-section-label">Impact</span>
+      <h2>Onboarding became a growth lever, not just a checkbox.</h2>
+      <div class="proj-impact-stats">
+        <div class="proj-impact-stat">
+          <div class="proj-impact-num">↑</div>
+          <div class="proj-impact-label">Quality of first interactions with Copilot</div>
+        </div>
+        <div class="proj-impact-stat">
+          <div class="proj-impact-num">↑</div>
+          <div class="proj-impact-label">Prompt submission rate from new users</div>
+        </div>
+        <div class="proj-impact-stat">
+          <div class="proj-impact-num">✓</div>
+          <div class="proj-impact-label">Clearer Starter vs Premium value differentiation</div>
+        </div>
+        <div class="proj-impact-stat">
+          <div class="proj-impact-num">∞</div>
+          <div class="proj-impact-label">Reusable onboarding system for future surfaces</div>
+        </div>
+      </div>
+      <p style="margin-top:28px;">This work fed directly into broader chat adoption and retention efforts, becoming a foundational pattern for how Copilot introduces itself to new users across the M365 ecosystem.</p>
+    </div>
+
+  </div>
+
+  <!-- PROJECT NAV -->
+  <div class="proj-nav">
+    <div></div>
+    <a href="project-2.html" class="proj-nav-link proj-nav-link--next">
+      <span class="proj-nav-dir">Next Project →</span>
+      <span class="proj-nav-title">AI Previewer in M365 Copilot</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-left">© 2025 Adarsh Raj Shah. All rights reserved.</div>
+    <div class="footer-right">Designed &amp; built with care.</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    const nav = document.getElementById('backNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+</body>
+</html>
